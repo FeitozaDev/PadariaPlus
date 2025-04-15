@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="imagens/favicon.png" rel="icon" type="image/png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria Plus</title>
+
+    <!--Css Nativo-->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!--Icones do Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <header id="inicio">
+        <div class="logo-top">
+            <img src="imagens/logo.png"/>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#mapa">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="sobre" class="sessao-sobre">
+        <h1>O melhor de nossos pães e bolos para você</h1>
+        <h2>Desde 2001, o lugar mais gostoso da cidade</h2>
+        <img src="imagens/produtos-padaria.jpg"/>
+    </div>
+    
+    <div class="ornamento"><img src="imagens/ornamento.png"/></div>
+
+    <div id="produtos" class="produtos">
+        <h1>Veja nossos produtos abaixo</h1>
+
+        <!--Seção dos pães-->
+        <h2><i class="bi bi-dash-lg"></i> <img class="icone" src="imagens/pao.png"/>Pães <i class="bi bi-dash-lg"></i></h2>
+        <p>Temos um processo de fabricação 100% caseiro. Esse foi
+        um dos maiores motivos que fizeram com que a Padaria Plus
+        crescesse com as proporções que temos hoje. Temos um pão
+        único de pura qualidade.</p>
+        <img id="paes" src="imagens/paes.jpg"/>
+
+        <!-- Seção dos bolos-->
+        <h2><i class="bi bi-dash-lg"></i> <img class="icone" src="imagens/bolo.png"/>Bolos <i class="bi bi-dash-lg"></i></h2>
+        <p>Uma viagem para a Itália nos fez conhecer alguns ingredientes
+        que são essenciais para que a massa do bolo fique macia e gostosa.
+        Hoje temos um produto incomparável.</p>
+        <img id="bolos" src="imagens/bolos.jpg"/>
+    </div>
+
+    <div class="ornamento"><img src="imagens/ornamento.png"/></div>
+
+    <!--Botão voltar ao topo-->
+    <div class="botao-subir">
+        <a id="subir-topo" href="#inicio"><i class="bi bi-arrow-up-circle-fill" title="Subir"></i></a>
+    </div>
+
+    <footer id="mapa">
+        <div class="mapa-site">
+            <h1>Contate-nos</h1>
+            <ul>
+                <li><i class="bi bi-telephone"></i> Telefone: <span>(85) 98888-8888</span></li>
+                <li><i class="bi bi-geo-alt"></i> Endereço: <span>Avenida Santos Agoz Nº 456</span></li>
+            </ul>
+        </div>
+        <div class="mapa-site">
+            <h1>Funcionamento</h1>
+            <ul>
+                <li><i class="bi bi-clock"></i> Segunda à sexta: <span>7h às 16h</span></li>
+                <li><i class="bi bi-clock"></i> Sábados e domingos: <span>7h às 13h</span></li>
+                <li><i class="bi bi-clock"></i> Feriados: <span>8h às 12h</span></li>
+            </ul>
+        </div>
+        
+    </footer>
+    <h1 id="pagamento-titulo">Formas de pagamento:</h1>
+    <div id="pagamentos"><img src="imagens/bandeiras_cartoes.png"/></div>
+    <div class="copy">2025 | <span>Padaria Plus</span> - Todos os direitos reservados.</div>
+
+    <script>
+        /*EFEITO DE SCROOW SUAVE NA ROLAGEM DO SITE*/
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        /*//EFEITO DE SCROOW SUAVE NA ROLAGEM DO SITE*/
+    </script>
+</body>
+</html>
